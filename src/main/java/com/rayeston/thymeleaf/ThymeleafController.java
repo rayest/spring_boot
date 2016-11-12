@@ -1,9 +1,9 @@
 package com.rayeston.thymeleaf;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,18 +11,18 @@ import java.util.List;
 /**
  * Created by Rayest on 2016/8/30 0030.
  */
-@RestController
+@Controller
 public class ThymeleafController {
     @RequestMapping(value = "/thymeleaf", method = RequestMethod.GET)
     public String thymeleaf(Model model){
-        ThymeleafEntity single = new ThymeleafEntity("aa", 11);
-        List<ThymeleafEntity> people = new ArrayList<>();
-        ThymeleafEntity thymeleafEntity1 = new ThymeleafEntity("xx", 11);
-        ThymeleafEntity thymeleafEntity2 = new ThymeleafEntity("yy", 22);
-        ThymeleafEntity thymeleafEntity3 = new ThymeleafEntity("zz", 33);
-        people.add(thymeleafEntity1);
-        people.add(thymeleafEntity2);
-        people.add(thymeleafEntity3);
+        Person single = new Person("aa", 11);
+        List<Person> people = new ArrayList<>();
+        Person person1 = new Person("xx", 11);
+        Person person2 = new Person("yy", 22);
+        Person person3 = new Person("zz", 33);
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
         model.addAttribute("singlePerson", single);
         model.addAttribute("people", people);
         return "thymeleaf";
