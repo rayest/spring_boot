@@ -3,14 +3,14 @@ package com.rayeston.thymeleaf;
 /**
  * Created by Rayest on 2016/8/30 0030.
  */
-public class ThymeleafPersonEntity {
+public class ThymeleafEntity {
     private String name;
     private Integer age;
 
-    public ThymeleafPersonEntity() {
+    public ThymeleafEntity() {
     }
 
-    public ThymeleafPersonEntity(String name, Integer age) {
+    public ThymeleafEntity(String name, Integer age) {
         this.name = name;
         this.age = age;
     }

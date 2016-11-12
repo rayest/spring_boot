@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "user")  // 加载 properties 文件的配置
 public class User {
-    private  String userName;
+    private String userName;
     private String password;
 
     public String getUserName() {

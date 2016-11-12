@@ -13,7 +13,7 @@ public class UserController {
     private User user;
 
     @RequestMapping("/user")
-    public String userInfo() {
+    public String loadUser() {
         return "userName: " + user.getUserName() + ", password: " + user.getPassword();
     }
 
