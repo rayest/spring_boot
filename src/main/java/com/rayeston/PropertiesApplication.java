@@ -12,9 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 public class PropertiesApplication {
-    @Value("${user.userName}") // 注入 application.properties 配置文件中的属性值 user.userName
+    // 注入 application.properties 配置文件中的属性值 user.userName
+    @Value("${user.userName}")
     private String userName;
-    @Value("${user.password}") // 注入 application.properties 配置文件中的属性值 user.password
+
+    // 注入 application.properties 配置文件中的属性值 user.password
+    @Value("${user.password}")
     private String password;
 
     @RequestMapping("/user")
