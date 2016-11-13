@@ -38,6 +38,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.4.2.RELEASE</version>
             </plugin>
             <!-- 配置 JDK -->
             <plugin>
@@ -74,7 +75,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>${spring.boot.version}</version>
+            <version>1.4.0.RELEASE</version>
         </dependency>
         <!-- 模板引擎 -->
         <dependency>
@@ -93,6 +94,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-loader</artifactId>
             <version>${spring.boot.version}</version>
+        </dependency>
+        <!-- JPA 操作数据库 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>1.4.0.RELEASE</version>
         </dependency>
         <!-- jdbc 依赖 -->
         <dependency>
