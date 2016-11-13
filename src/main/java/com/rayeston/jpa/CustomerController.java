@@ -54,5 +54,4 @@ public class CustomerController {
     public Page<Customer> page() {
         return customerRepository.findAll(new PageRequest(1, 2));
     }
-
 }
