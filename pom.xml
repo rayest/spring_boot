@@ -120,6 +120,13 @@
             <version>${spring.boot.version}</version>
         </dependency>
 
+        <!-- spring data rest -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
         <!-- 热部署 -->
         <dependency>
             <groupId>org.springframework</groupId>
