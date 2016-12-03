@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
     <name>spring_boot</name>
-    <groupId>cn.rayest</groupId>
+    <groupId>com.rayeston</groupId>
     <artifactId>spring_boot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -169,6 +169,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
             <version>${spring.boot.version}</version>
         </dependency>
 
