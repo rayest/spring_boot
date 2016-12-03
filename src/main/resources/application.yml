@@ -23,3 +23,6 @@ logging:
     org.springframework.security: DEBUG
 
 
+rayest:
+  age: 26
+  name: lee
