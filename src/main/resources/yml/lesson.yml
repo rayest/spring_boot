@@ -1,0 +1,39 @@
+# This is an annotation line
+
+# YAML 支持三种数据结构：对象(键值对：映射、哈希、字典)、数组、纯量
+
+# 对象
+animal: pets
+hash: {
+  name: lee,
+  foo: bar
+}
+
+# 数组
+- Cat
+- Dog
+- Goldfish
+
+animal: [Cat, Dog]
+
+# 复合结构
+languages:
+ - Java
+ - Python
+ - Groovy
+
+websites:
+ YAML: yaml.org
+ Ruby: ruby-lang.org
+ Python: python.org
+
+#  纯量
+number: 3.14
+isSet: true
+isExist: ~      # null
+iso8601: 2001-12-14t21:59:43.10-05:00
+date: 1976-07-31
+
+# 字符串，不加引号
+name: rayest
+book: 'Lee''s book'
