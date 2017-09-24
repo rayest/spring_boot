@@ -1,4 +1,4 @@
-package com.rayeston.jms;
+package com.rayeston.jms.queue;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
@@ -7,8 +7,7 @@ import javax.jms.*;
 /**
  * Created by lirui on 2017/9/24.
  */
-
-public class AppProducer {
+public class AppConsumer {
     public static final String url = "tcp://127.0.0.1:61616";
     public static final String queueName = "queue-test";
     public static final String textContent = "test";
@@ -19,12 +18,15 @@ public class AppProducer {
         connection.start();
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
         Destination destination = session.createQueue(queueName);
-        MessageProducer messageProducer = session.createProducer(destination);
-        for (int i = 0; i < 100; i++) {
-            TextMessage textMessage = session.createTextMessage(textContent + i);
-            messageProducer.send(textMessage);
-            System.out.println("发送消息" + textMessage.getText());
-        }
-        connection.close();
+        MessageConsumer messageConsumer = session.createConsumer(destination);
+        messageConsumer.setMessageListener(message -> {
+            TextMessage textMessage = (TextMessage) message;
+            try {
+                System.out.println("接收消息"+ textMessage.getText());
+            } catch (JMSException e) {
+                e.printStackTrace();
+            }
+        });
+//        connection.close();
     }
 }
