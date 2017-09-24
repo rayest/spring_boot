@@ -5,7 +5,10 @@ package com.rayeston.jpa;
  */
 public enum JpaUserCodes {
 
-    JPA_USER_IS_NOT_EXISTED("1001", "用户不存在");
+    JPA_USER_IS_NOT_EXISTED("1001", "用户不存在"),
+    JPA_USERS_EMPTY("1002", "没有用户"),
+    JPA_USER_DELETE_SUCCESSFUL("1003", "用户删除成功"),
+    JPA_USER_DELETE_FAILED("1004", "用户删除失败");
 
     private String code;
     private String message;
