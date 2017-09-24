@@ -84,8 +84,7 @@
             <optional>true</optional>
             <version>${spring.boot.version}</version>
         </dependency>
-        <!--  -->
-        <dependency>
+         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-loader</artifactId>
             <version>${spring.boot.version}</version>
@@ -166,11 +165,6 @@
             <artifactId>spring-boot</artifactId>
             <version>${spring.boot.version}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>-->
 
         <!-- 包含支持 UI 模板(Velocity, FreeMaker, JasperReports), 邮件服务, 脚本服务, 缓存 cache, 任务计划 scheduling -->
         <dependency>
@@ -216,7 +210,20 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.5.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.14</version>
+        </dependency>
     </dependencies>
 </project>
