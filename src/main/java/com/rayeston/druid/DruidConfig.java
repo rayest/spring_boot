@@ -19,11 +19,6 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-/**
- * 2017-4-26
- *
- * @author wt
- */
 @Configuration
 @MapperScan(basePackages = "com.rayeston")
 public class DruidConfig {
