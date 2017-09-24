@@ -3,6 +3,7 @@ package com.rayeston.jpa;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by lirui on 2017/9/24.
@@ -21,5 +22,8 @@ public class JpaUser {
 
     @Column(nullable = false)
     private Integer age;
+
+    @Column(nullable = false, name = "create_date")
+    private Date createDate;
 
 }
