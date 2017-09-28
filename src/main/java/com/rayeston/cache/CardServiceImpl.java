@@ -17,7 +17,7 @@ public class CardServiceImpl implements CardService {
     // 缓存新增的或更新的数据到缓存，其中缓存的名称是 cards, 数据的 key 是 card 的 id
     @Override
     @CachePut(value = "cards", key = "#card.id")
-    public Card save(Card card) {
+    public Card create(Card card) {
         Card card1 = cardRepository.save(card);
         System.out.println("为 id、key 为：" + card1.getId() + "数据做了缓存");
         return card1;
@@ -25,18 +25,19 @@ public class CardServiceImpl implements CardService {
 
     // 缓存 key 是 card 的 id 数据到缓存 cards 中
     @Override
-    @Cacheable(value = "cards", key = "#card.id")
-    public Card findOne(Card card) {
-        Card card1 = cardRepository.findOne(card.getId());
-        System.out.println("为id、key 为：" + card1.getId() + "的数据做了缓存 ");
-        return card1;
+    @Cacheable(value = "cards", key = "#id")
+    public Card getById(long id) {
+        Card card = cardRepository.findOne(id);
+        System.out.println("为id、key 为：" + card.getId() + "的数据做了缓存 ");
+        return card;
     }
 
     // 从缓存 cards 中删除 key 为 id 的数据（数据中的数据也会被删掉）
     @Override
     @CacheEvict(value = "cards")
-    public void remove(Long id) {
+    public void deleteById(Long id) {
         System.out.println("删除了id、key 为" + id + "的数据缓存");
         cardRepository.delete(id);
     }
+
 }

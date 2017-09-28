@@ -19,7 +19,7 @@ public class ProducerController {
     private ProducerService producerService;
 
     @RequestMapping(value = "/producer", method = RequestMethod.GET)
-    public String testProducer(){
+    public String testProducer() {
         producerService.sendMessage(message);
         return ok;
     }

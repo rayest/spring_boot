@@ -1,8 +1,6 @@
 package com.rayeston.cache;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by Rayest on 2016/11/13 0013.
@@ -10,7 +8,8 @@ import javax.persistence.Id;
 @Entity
 public class Card {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Long id;
     private String name;
     private Integer age;

@@ -1,10 +1,7 @@
 package com.rayeston.cache;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by Rayest on 2016/11/13 0013.
@@ -14,20 +11,19 @@ public class CardController {
     @Autowired
     private CardService cardService;
 
-    @RequestMapping(value = "/card/cache/put", method = RequestMethod.GET)
-    public Card putCache(Card card) {
-        return cardService.save(card);
+    @RequestMapping(value = "/card", method = RequestMethod.POST)
+    public Card create(@RequestBody Card card) {
+        return cardService.create(card);
     }
 
-    @RequestMapping(value = "/card/cache/able", method = RequestMethod.GET)
-    public Card EnableCache(Card card) {
-        return cardService.findOne(card);
+    @RequestMapping(value = "/card/id/{id}", method = RequestMethod.GET)
+    public Card getById(@PathVariable("id") long id) {
+        return cardService.getById(id);
     }
 
-    @RequestMapping(value = "/card/cache/evit/{id}", method = RequestMethod.GET)
-    public String evitCache(@PathVariable("id") Long id) {
-        cardService.remove(id);
+    @RequestMapping(value = "/card/id/{id}", method = RequestMethod.DELETE)
+    public String deleteById(@PathVariable("id") Long id) {
+        cardService.deleteById(id);
         return "OK";
     }
-
 }

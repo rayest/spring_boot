@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-    <h3>Message: ${msg}</h3>
+好的
 </body>
 </html>

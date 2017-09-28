@@ -24,6 +24,6 @@ public class ProducerService {
             TextMessage textMessage = session.createTextMessage(message);
             return textMessage;
         });
-        System.out.println("发送消息" + message);
+        System.out.println("发送消息：" + message);
     }
 }

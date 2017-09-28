@@ -13,7 +13,7 @@ import javax.jms.JMSException;
  * Created by lirui on 2017/9/24.
  */
 @Configuration
-public class ConnectFactoryConfiguration {
+public class ProducerConfiguration {
     public static final String url = "tcp://127.0.0.1:61616";
 
     public ActiveMQConnectionFactory activeMQConnectionFactory() {
