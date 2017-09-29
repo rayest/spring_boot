@@ -24,6 +24,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
+  freemarker:
+    cache: false
+    charset: utf-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
 
 mybatis:
   mapperLocations: classpath*:com/rayeston/mybatis/*.xml

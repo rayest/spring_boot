@@ -38,15 +38,10 @@ public class Crawler {
     private static void saveImages(String imageUrl) throws IOException {
         int id = UUID.randomUUID().hashCode();
         File dest = new File("src/images/" + id + ".png");
-        //接收字节输入流
-        InputStream is;
-        //字节输出流
         FileOutputStream fos = new FileOutputStream(dest);
         URL temp = new URL(imageUrl);
-        is = temp.openStream();
-        //为字节输入流加缓冲
+        InputStream is = temp.openStream();
         BufferedInputStream bis = new BufferedInputStream(is);
-        //为字节输出流加缓冲
         BufferedOutputStream bos = new BufferedOutputStream(fos);
         int length;
         byte[] bytes = new byte[1024 * 20];
