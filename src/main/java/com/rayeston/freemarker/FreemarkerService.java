@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,5 +28,15 @@ public class FreemarkerService {
         }
         return freemarkerUserList;
 
+    }
+
+    public String getByType(ModelMap modelMap) {
+        modelMap.put("int", 100);
+        modelMap.put("long", 10000L);
+        modelMap.put("string", "This is string");
+        modelMap.put("double", 3.14d);
+        modelMap.put("boolean", true);
+        modelMap.put("date", new Date());
+        return "type";
     }
 }

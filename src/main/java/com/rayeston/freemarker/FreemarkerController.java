@@ -29,4 +29,9 @@ public class FreemarkerController {
     public String getUsers(ModelMap modelMap){
         return freemarkerService.getUsers(modelMap);
     }
+
+    @RequestMapping(value = "/freemarker/type", method = RequestMethod.GET)
+    public String getByType(ModelMap modelMap){
+        return freemarkerService.getByType(modelMap);
+    }
 }
