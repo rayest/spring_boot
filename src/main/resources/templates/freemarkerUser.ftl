@@ -8,10 +8,13 @@
     <title>Freemarker</title>
 </head>
 <body>
-Date: ${time?date}
 <br>
-Time: ${time?time}
+username: ${username!}
 <br>
-Message: ${message}
+<ul>
+    <#list userList as item>
+        <li>${item.name}</li>
+    </#list>
+</ul>
 </body>
 </html>

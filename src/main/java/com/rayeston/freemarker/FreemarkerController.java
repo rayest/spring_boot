@@ -5,6 +5,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.annotation.Resource;
 import java.util.Date;
 
 /**
@@ -13,12 +14,19 @@ import java.util.Date;
 @Controller
 public class FreemarkerController {
 
-    private String message = "Hello World";
+    @Resource
+    private FreemarkerService freemarkerService;
 
-    @RequestMapping(value = "/freemarker", method = RequestMethod.GET)
+    @RequestMapping(value = "/freemarker/hello", method = RequestMethod.GET)
     public String showFreemarker(ModelMap modelMap){
+        String message = "Hello World";
         modelMap.put("time", new Date());
-        modelMap.put("message", this.message);
+        modelMap.put("message", message);
         return "hello";
+    }
+
+    @RequestMapping(value = "/freemarker/users", method = RequestMethod.GET)
+    public String getUsers(ModelMap modelMap){
+        return freemarkerService.getUsers(modelMap);
     }
 }

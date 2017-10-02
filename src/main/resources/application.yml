@@ -32,6 +32,8 @@ spring:
     expose-request-attributes: true
     expose-session-attributes: true
     request-context-attribute: request
+#  thymeleaf:
+#    cache: false
 
 mybatis:
   mapperLocations: classpath*:com/rayeston/mybatis/*.xml
