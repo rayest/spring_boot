@@ -34,4 +34,9 @@ public class FreemarkerController {
     public String getByType(ModelMap modelMap){
         return freemarkerService.getByType(modelMap);
     }
+
+    @RequestMapping(value = "/freemarker/assign", method = RequestMethod.GET)
+    public String getByDesign(ModelMap modelMap){
+        return freemarkerService.getByDesign(modelMap);
+    }
 }

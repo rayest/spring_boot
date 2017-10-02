@@ -39,4 +39,8 @@ public class FreemarkerService {
         modelMap.put("date", new Date());
         return "type";
     }
+
+    public String getByDesign(ModelMap modelMap) {
+        return "assign";
+    }
 }
