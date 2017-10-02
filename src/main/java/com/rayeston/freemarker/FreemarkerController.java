@@ -39,4 +39,11 @@ public class FreemarkerController {
     public String getByDesign(ModelMap modelMap){
         return freemarkerService.getByDesign(modelMap);
     }
+
+    @RequestMapping(value = "/freemarker/sort", method = RequestMethod.GET)
+    public String sort(ModelMap modelMap){
+        return freemarkerService.sort(modelMap);
+    }
+
+
 }

@@ -43,4 +43,9 @@ public class FreemarkerService {
     public String getByDesign(ModelMap modelMap) {
         return "assign";
     }
+
+    public String sort(ModelMap modelMap) {
+        modelMap.put("sort_int", new SortMethod());
+        return "sort";
+    }
 }
