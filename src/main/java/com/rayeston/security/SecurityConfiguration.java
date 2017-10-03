@@ -3,6 +3,7 @@ package com.rayeston.security;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -12,15 +13,20 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  */
 @Configuration
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private static final String username = "rayest";
     private static final String password = "123456";
     private static final String user_role = "USER";
+    private static final String admin = "admin";
+    private static final String admin_password = "111111";
+    private static final String admin_role = "ADMIN";
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser(username).password(password).roles(user_role);
+        auth.inMemoryAuthentication().withUser(username).password(password).roles(user_role)
+        .and().withUser(admin).password(admin_password).roles(admin_role);
     }
 
     @ApiOperation("配置安全策略")
