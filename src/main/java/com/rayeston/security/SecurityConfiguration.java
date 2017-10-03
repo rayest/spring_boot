@@ -14,7 +14,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    private static final String username = "ray";
+    private static final String username = "rayest";
     private static final String password = "123456";
     private static final String user_role = "USER";
 
