@@ -1,6 +1,7 @@
 package com.rayeston.auth.entity;
 
-import com.springmvc.auth.common.BaseEntity;
+
+import com.rayeston.auth.commons.BaseEntity;
 
 import java.io.Serializable;
 
