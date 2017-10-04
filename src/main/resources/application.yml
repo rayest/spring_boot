@@ -34,8 +34,14 @@ spring:
     expose-request-attributes: true
     expose-session-attributes: true
     request-context-attribute: request
-#  thymeleaf:
-#    cache: false
+  thymeleaf:
+    cache: false
+#  热部署，关闭
+  devtools:
+    restart:
+      enabled: false
+      trigger-file: ./templates
+
 mybatis:
   mapperLocations: classpath*:com/rayeston/mybatis/*.xml
 
@@ -57,6 +63,8 @@ eureka:
     fetch-registry: false
     service-url:
       default-zone: http://localhost:${server.port}/eureka/
+
+
 
 
 
