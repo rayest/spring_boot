@@ -65,6 +65,7 @@ eureka:
       default-zone: http://localhost:${server.port}/eureka/
 # 全局值
 name: lee
+id: ${random.uuid}
 
 
 

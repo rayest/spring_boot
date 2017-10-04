@@ -17,9 +17,13 @@ public class MyCommandLineRunner implements CommandLineRunner {
     @Value("${name}")
     private String name;
 
+    @Value("${id}")
+    private String id;
+
     @Override
     public void run(String... args) throws Exception {
         System.out.println("SpringApplication.run()方法被调用前执行，以初始化一些必要的操作");
         System.out.println(this.name);
+        System.out.println(this.id);
     }
 }
