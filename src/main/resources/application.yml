@@ -67,7 +67,10 @@ eureka:
 name: lee
 id: ${random.uuid}
 
-
+my:
+  servers:
+    - 634178463@qq.com
+    - yi@rayest.cn
 
 
 
