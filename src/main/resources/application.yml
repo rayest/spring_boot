@@ -63,7 +63,8 @@ eureka:
     fetch-registry: false
     service-url:
       default-zone: http://localhost:${server.port}/eureka/
-
+# 全局值
+name: lee
 
 
 
