@@ -23,7 +23,9 @@ spring:
       druid.stat.slowSqlMillis: 5000
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
+    show-sql: true
+
   freemarker:
     cache: false
     charset: utf-8
@@ -42,6 +44,20 @@ security:
   user:
     password: 123456
     name: ray
+# 日志级别
+logging:
+  level: info
+
+#  配置spring-cloud
+server:
+  port: 1111
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      default-zone: http://localhost:${server.port}/eureka/
+
 
 
 
