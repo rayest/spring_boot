@@ -41,6 +41,9 @@ spring:
     restart:
       enabled: false
       trigger-file: ./templates
+# profile 激活选择
+  profiles:
+    active: dev
 
 mybatis:
   mapperLocations: classpath*:com/rayeston/mybatis/*.xml
@@ -63,14 +66,15 @@ eureka:
     fetch-registry: false
     service-url:
       default-zone: http://localhost:${server.port}/eureka/
-# 全局值
+# 自定义全局值
 name: lee
 id: ${random.uuid}
-
 my:
   servers:
     - 634178463@qq.com
     - yi@rayest.cn
+
+
 
 
 

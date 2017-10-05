@@ -1,4 +1,4 @@
-package com.rayeston.foundation;
+package com.rayeston.configuration;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.NotEmpty;

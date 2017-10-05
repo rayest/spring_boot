@@ -1,4 +1,4 @@
-package com.rayeston.foundation;
+package com.rayeston.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;

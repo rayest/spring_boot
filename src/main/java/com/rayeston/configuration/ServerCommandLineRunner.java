@@ -1,4 +1,4 @@
-package com.rayeston.foundation;
+package com.rayeston.configuration;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.context.properties.ConfigurationProperties;

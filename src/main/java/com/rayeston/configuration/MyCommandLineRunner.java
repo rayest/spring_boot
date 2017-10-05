@@ -1,4 +1,4 @@
-package com.rayeston.foundation;
+package com.rayeston.configuration;
 
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Value;
