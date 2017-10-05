@@ -40,34 +40,34 @@ public class DruidConfig {
     @Value("${spring.datasource.driver-class-name:}")
     private String driverClassName;
 
-    @Value("${spring.datasource.initialSize}")
+    @Value("${spring.datasource.tomcat.initial-size}")
     private int initialSize;
 
-    @Value("${spring.datasource.minIdle}")
+    @Value("${spring.datasource.tomcat.min-idle}")
     private int minIdle;
 
-    @Value("${spring.datasource.maxActive}")
+    @Value("${spring.datasource.tomcat.max-active}")
     private int maxActive;
 
-    @Value("${spring.datasource.maxWait}")
+    @Value("${spring.datasource.tomcat.max-wait}")
     private int maxWait;
 
-    @Value("${spring.datasource.timeBetweenEvictionRunsMillis}")
+    @Value("${spring.datasource.tomcat.time-between-eviction-runs-millis}")
     private int timeBetweenEvictionRunsMillis;
 
-    @Value("${spring.datasource.minEvictableIdleTimeMillis}")
+    @Value("${spring.datasource.tomcat.min-evictable-idle-time-millis}")
     private int minEvictableIdleTimeMillis;
 
-    @Value("${spring.datasource.validationQuery}")
+    @Value("${spring.datasource.tomcat.validation-query}")
     private String validationQuery;
 
-    @Value("${spring.datasource.testWhileIdle}")
+    @Value("${spring.datasource.tomcat.test-while-idle}")
     private boolean testWhileIdle;
 
-    @Value("${spring.datasource.testOnBorrow}")
+    @Value("${spring.datasource.tomcat.test-on-borrow}")
     private boolean testOnBorrow;
 
-    @Value("${spring.datasource.testOnReturn}")
+    @Value("${spring.datasource.tomcat.test-on-return}")
     private boolean testOnReturn;
 
     @Value("${spring.datasource.poolPreparedStatements}")
@@ -79,7 +79,7 @@ public class DruidConfig {
     @Value("${spring.datasource.filters}")
     private String filters;
 
-    @Value("{spring.datasource.connectionProperties}")
+    @Value("{spring.datasource.tomcat.connection-properties}")
     private String connectionProperties;
 
     @ApiOperation("在同样的DataSource中，首先使用被 @Primary 标注的DataSource")

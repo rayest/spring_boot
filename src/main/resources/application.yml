@@ -5,26 +5,33 @@ spring:
     password: 199011081108
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    initialSize: 5
-    minIdle: 5
-    maxActive: 20
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: SELECT 1 FROM DUAL
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
     poolPreparedStatements: true
     maxPoolPreparedStatementPerConnectionSize: 20
     filters: stat,wall,log4j
-    connectionProperties:
-      druid.stat.mergeSql: true;
-      druid.stat.slowSqlMillis: 5000
+    tomcat:
+      max-wait: 60000
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      connection-properties:
+        druid:
+          stat:
+            merge-sql: true;
+            slow-sql-millis: 5000
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
+    generate-ddl: false
 
   freemarker:
     cache: false
@@ -60,7 +67,13 @@ security:
     name: ray
 # 日志级别
 logging:
-  level: info
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    logging.level.org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    logging.level.com.itmuch: DEBUG
+
 
 #  配置spring-cloud
 server:
