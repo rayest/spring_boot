@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * Created by Rayest on 2016/10/8 0008.
@@ -15,6 +16,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @EnableCaching
 @ServletComponentScan
 @EnableEurekaServer
+@EnableScheduling
 public class Application {
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(Application.class);
