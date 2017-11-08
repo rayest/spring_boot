@@ -295,6 +295,13 @@
             <artifactId>spring-boot-starter-batch</artifactId>
             <version>${spring.boot.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jibx/jibx-tools -->
+        <dependency>
+            <groupId>org.jibx</groupId>
+            <artifactId>jibx-tools</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>

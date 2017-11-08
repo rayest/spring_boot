@@ -18,10 +18,10 @@ import static com.rayeston.foundation.DateUtils.yyyy_MM_dd_HH_mm_ss;
 public class ScheduledTasks implements CommandLineRunner {
 
     private Logger logger = LoggerFactory.getLogger(ScheduledTasks.class);
-    public static final SimpleDateFormat dateFormat = new SimpleDateFormat(yyyy_MM_dd_HH_mm_ss);
 
     @Scheduled(fixedRate = 5000)
     public void reportCurrentTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(yyyy_MM_dd_HH_mm_ss);
         logger.info("The time is now {}", dateFormat.format(new Date()));
     }
 

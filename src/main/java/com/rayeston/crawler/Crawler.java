@@ -13,7 +13,7 @@ import java.util.UUID;
  * Created by lirui on 2017/9/28.
  */
 public class Crawler {
-    private static final String baidu = "http://www.lofter.com/art/product-33503100";
+    private static final String baidu = "http://v.youku.com/v_show/id_XODAxMjE2MDMy.html";
     private static final String a = "a";
     private static final String id = "g-productshow";
 
@@ -56,6 +56,7 @@ public class Crawler {
 
     public static void main(String[] args) throws IOException {
         Elements element = getByUrl(baidu);
+        System.out.println(element);
     }
 
 }
