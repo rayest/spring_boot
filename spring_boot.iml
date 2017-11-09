@@ -302,5 +302,9 @@
     <orderEntry type="library" name="Maven: org.jibx.config.3rdparty.org.eclipse:org.eclipse.jdt.core:3.7.0.v_B61" level="project" />
     <orderEntry type="library" name="Maven: org.jibx.config.3rdparty.org.eclipse:org.eclipse.osgi:3.7.0.v20110613" level="project" />
     <orderEntry type="library" name="Maven: org.jibx.config.3rdparty.org.eclipse:org.eclipse.text:3.5.100.v20110505-0800" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-redis:1.4.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-redis:1.7.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-keyvalue:1.1.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-oxm:4.2.6.RELEASE" level="project" />
   </component>
 </module>

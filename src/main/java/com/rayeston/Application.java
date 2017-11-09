@@ -7,6 +7,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * Created by Rayest on 2016/10/8 0008.
@@ -17,6 +18,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @ServletComponentScan
 @EnableEurekaServer
 @EnableScheduling
+@EnableTransactionManagement
 public class Application {
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(Application.class);
