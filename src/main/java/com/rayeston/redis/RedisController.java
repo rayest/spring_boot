@@ -20,7 +20,7 @@ public class RedisController {
     private RedisService redisService;
 
     @RequestMapping(value = "/redis", method = RequestMethod.POST)
-    public HttpEntity create(@RequestBody Redis redis){
-        return redisService.create(redis);
+    public HttpEntity create(@RequestBody RedisEntity redisEntity){
+        return redisService.create(redisEntity);
     }
 }

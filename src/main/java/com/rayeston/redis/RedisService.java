@@ -19,8 +19,8 @@ public class RedisService {
     @Resource
     private RedisUtils redisUtils;
 
-    public HttpEntity create(Redis redis) {
-        String key = redis.getKey();
+    public HttpEntity create(RedisEntity redisEntity) {
+        String key = redisEntity.getKey();
         String value = UUID.randomUUID().toString();
         redisUtils.set(key, value, THIRTY_MINUTES);
         String foundValue = redisUtils.get(key);
