@@ -42,12 +42,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .authorizeRequests()
-                .antMatchers("/", "/security/hello").permitAll() //不需要验证
+                .antMatchers("/mongo").permitAll() //不需要验证
+//                .antMatchers("/", "/security/hello").permitAll() //不需要验证
                 .anyRequest().authenticated() // 除"/," 和 "/security/hello"外，都需要验证
                 .and()
                 .logout().permitAll() // 退出不需要验证
                 .and()
                 .formLogin(); // 使用form表单验证
+        httpSecurity.csrf().disable(); // 如果为403错误，尝试设置该步，以禁止CSRF验证
     }
 
 }

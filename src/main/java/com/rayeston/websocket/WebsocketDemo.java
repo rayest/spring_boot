@@ -16,6 +16,7 @@ import java.util.Set;
 /**
  * Created by lirui on 2017/9/28.
  */
+
 @ServerEndpoint(value = "/websocketDemo/{userId}", configurator = SpringConfigurator.class)
 public class WebsocketDemo {
 

@@ -1,4 +1,4 @@
-package com.rayeston.redis;
+package com.rayeston.mongo;
 
 import io.swagger.annotations.Api;
 import org.springframework.http.HttpEntity;
@@ -10,18 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * Created by lirui on 2017/11/8.
+ * Created by lirui on 2017/11/12.
  */
-@Api("spring-redisTemplate 的使用")
+@Api("MongoDB, 需要配置MongoDB数据库，否则会报错 connect")
 @RestController
-public class RedisController {
+public class MongoUserController {
 
     @Resource
-    private RedisService redisService;
+    private MongoUserService mongoUserService;
 
-    @RequestMapping(value = "/redis", method = RequestMethod.POST)
-    public HttpEntity create(@RequestBody RedisEntity redisEntity){
-        return redisService.create(redisEntity);
+    @RequestMapping(value = "/mongo", method = RequestMethod.POST)
+    public HttpEntity create(@RequestBody MongoUser mongoUser) {
+        return mongoUserService.create(mongoUser);
     }
-
 }

@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
     public Object defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
-        logger.error("---DefaultException Handler---Host {} invokes url {} ERROR: {}", req.getRemoteHost(), req.getRequestURL(), e.getMessage());
+        logger.error("error: " + e.getMessage());
         return e.getMessage();
     }
 
