@@ -2,10 +2,7 @@ package com.rayeston.redis;
 
 import io.swagger.annotations.Api;
 import org.springframework.http.HttpEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -20,8 +17,13 @@ public class RedisController {
     private RedisService redisService;
 
     @RequestMapping(value = "/redis", method = RequestMethod.POST)
-    public HttpEntity create(@RequestBody RedisEntity redisEntity){
+    public HttpEntity create(@RequestBody RedisEntity redisEntity) {
         return redisService.create(redisEntity);
+    }
+
+    @RequestMapping(value = "/redis/key/{key}", method = RequestMethod.GET)
+    public HttpEntity getByKey(@PathVariable("key") String key) {
+        return redisService.getByKey(key);
     }
 
 }
