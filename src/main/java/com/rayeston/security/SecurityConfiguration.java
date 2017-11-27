@@ -42,7 +42,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .authorizeRequests()
-                .antMatchers("/zooKeeper", "/").permitAll() //不需要验证
+                .antMatchers("/zooKeeper", "/freemarker/section").permitAll() //不需要验证
 //                .antMatchers("/", "/security/hello").permitAll() //不需要验证
                 .anyRequest().authenticated() // 除"/," 和 "/security/hello"外，都需要验证
                 .and()
