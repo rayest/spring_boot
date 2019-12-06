@@ -12,4 +12,14 @@ pipeline {
             }
         }
     }
+
+    post {
+        failure {
+            mail to: 'rayestonal@gmail.com', subject: 'The project failed'
+        }
+        success {
+            ehcho 'The project build success'
+            mail to: 'rayestonal@gmail.com', subject: 'The project build success'
+        }
+    }
 }
