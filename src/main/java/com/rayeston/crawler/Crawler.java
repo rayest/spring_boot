@@ -53,10 +53,4 @@ public class Crawler {
         bis.close();
         is.close();
     }
-
-    public static void main(String[] args) throws IOException {
-        Elements element = getByUrl(baidu);
-        System.out.println(element);
-    }
-
 }
