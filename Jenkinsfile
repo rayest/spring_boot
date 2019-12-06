@@ -22,13 +22,12 @@ pipeline {
             echo 'The project build success'
         }
 
-        allure {
+        allure {[
             includeProperties: false,
             jdk: '',
             properties: [],
             reportBuildPolicy: 'always',
             results: [[path: 'target/allure-results']]
-
-        }
+        ]}
     }
 }
