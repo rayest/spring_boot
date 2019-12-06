@@ -45,5 +45,10 @@ public class FreemarkerController {
         return freemarkerService.sort(modelMap);
     }
 
+    @RequestMapping(value = "/freemarker/section", method = RequestMethod.GET)
+    public String showSection(){
+        return freemarkerService.showSection();
+    }
+
 
 }

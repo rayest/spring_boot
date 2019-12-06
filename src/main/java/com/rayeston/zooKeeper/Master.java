@@ -16,9 +16,9 @@ public class Master implements Watcher {
     private ZooKeeper zooKeeper;
     private String hostPort;
 
-    Random random = new Random();
-    String serverId = Integer.toHexString(random.nextInt());
-    static boolean isLeader = false;
+    private Random random = new Random();
+    private String serverId = Integer.toHexString(random.nextInt());
+    private static boolean isLeader = false;
 
     private boolean checkMaster() throws KeeperException, InterruptedException {
         while (true) {

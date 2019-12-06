@@ -48,4 +48,8 @@ public class FreemarkerService {
         modelMap.put("sort_int", new SortMethod());
         return "sort";
     }
+
+    public String showSection() {
+        return "section";
+    }
 }
