@@ -19,7 +19,7 @@ pipeline {
             echo 'The project build failure'
         }
         success {
-            ehcho 'The project build success'
+            echo 'The project build success'
         }
     }
 }
