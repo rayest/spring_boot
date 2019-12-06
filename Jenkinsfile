@@ -4,6 +4,7 @@ pipeline {
     tools {
         maven 'mvn-3.6.3'
     }
+
     stages {
         stage('Build'){
             steps {
@@ -15,11 +16,10 @@ pipeline {
 
     post {
         failure {
-            mail to: 'rayestonal@gmail.com', subject: 'The project failed'
+            ehcho 'The project build failure'
         }
         success {
             ehcho 'The project build success'
-            mail to: 'rayestonal@gmail.com', subject: 'The project build success'
         }
     }
 }
