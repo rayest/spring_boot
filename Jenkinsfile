@@ -16,7 +16,7 @@ pipeline {
 
     post {
         failure {
-            ehcho 'The project build failure'
+            echo 'The project build failure'
         }
         success {
             ehcho 'The project build success'
