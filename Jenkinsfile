@@ -21,7 +21,7 @@ pipeline {
         success {
             echo 'The project build success'
         }
-
+    }
         script{
             allure ([
                 includeProperties: false,
@@ -31,5 +31,4 @@ pipeline {
                 results: [[path: 'target/allure-results']]
             ])
         }
-    }
 }
