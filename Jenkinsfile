@@ -12,6 +12,21 @@ pipeline {
                 sh "printenv"
             }
         }
+        stage('单元测试'){
+            steps {
+                retry(4){
+                    script{
+                        allure ([
+                            includeProperties: false,
+                            jdk: '',
+                            properties: [],
+                            reportBuildPolicy: 'always',
+                            results: [[path: 'target/allure-results']]
+                        ])
+                    }
+                }
+            }
+        }
     }
 
     post {
@@ -22,13 +37,4 @@ pipeline {
             echo 'The project build success'
         }
     }
-        script{
-            allure ([
-                includeProperties: false,
-                jdk: '',
-                properties: [],
-                reportBuildPolicy: 'always',
-                results: [[path: 'target/allure-results']]
-            ])
-        }
 }
