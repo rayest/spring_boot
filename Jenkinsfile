@@ -21,5 +21,14 @@ pipeline {
         success {
             echo 'The project build success'
         }
+
+        allure {
+            includeProperties: false,
+            jdk: '',
+            properties: [],
+            reportBuildPolicy: 'always',
+            results: [[path: 'target/allure-results']]
+
+        }
     }
 }

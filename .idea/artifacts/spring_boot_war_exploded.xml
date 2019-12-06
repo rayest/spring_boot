@@ -286,6 +286,12 @@
           <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.4.9" />
           <element id="library" level="project" name="Maven: jline:jline:0.9.94" />
           <element id="library" level="project" name="Maven: io.netty:netty:3.10.5.Final" />
+          <element id="library" level="project" name="Maven: io.qameta.allure:allure-junit4:2.8.1" />
+          <element id="library" level="project" name="Maven: io.qameta.allure:allure-java-commons:2.8.1" />
+          <element id="library" level="project" name="Maven: io.qameta.allure:allure-model:2.8.1" />
+          <element id="library" level="project" name="Maven: org.apache.tika:tika-core:1.19.1" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.9" />
+          <element id="library" level="project" name="Maven: org.jooq:joor-java-8:0.9.9" />
         </element>
       </element>
       <element id="directory" name="META-INF">
